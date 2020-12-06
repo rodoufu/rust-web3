@@ -1,6 +1,6 @@
 [package]
 name = "web3"
-version = "0.14.0"
+version = "0.14.1"
 description = "Ethereum JSON-RPC client."
 homepage = "https://github.com/tomusdrw/rust-web3"
 repository = "https://github.com/tomusdrw/rust-web3"
@@ -36,7 +36,8 @@ hyper-tls = { version = "0.4", optional = true }
 hyper-proxy = {version = "0.8.0", optional = true }
 typed-headers = { version = "0.2.0", optional = true }
 ## WS
-async-native-tls = { version = "0.3", optional = true, default-features = false }
+#async-native-tls = { version = "0.3", optional = true, default-features = false }
+async-native-tls = { git = "ssh://git@github.com/rodoufu/async-native-tls.git", branch = "fix/async-std", optional = true, default-features = false }
 async-std = { version = "1.6", optional = true }
 tokio = { version = "0.2", optional = true, features = ["full"] }
 tokio-util = { version = "0.5", optional = true, features = ["compat"] }
